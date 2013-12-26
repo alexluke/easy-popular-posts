@@ -104,8 +104,11 @@ function thisismyurl_easy_popular_posts( $options = '' ) {
 
 					foreach ( $myposts as $key=>$value ) {
 
-						if ( count( $popular_posts ) <= $options['count'] && $value > 0 )
-							$popular_posts[]->ID = $key;
+						if ( count( $popular_posts ) <= $options['count'] && $value > 0 ) {
+							$post = new stdClass;
+							$post->ID = $key;
+							$popular_posts[] = $post;
+						}
 
 					}
 				}
