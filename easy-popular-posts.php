@@ -202,7 +202,7 @@ class thisismyurl_popular_posts_widget extends WP_Widget
 		$creditlink = htmlspecialchars( $instance['creditlink'] );
 		$displaytype = htmlspecialchars( $instance['displaytype'] );
 		$countoption ='';
-		for ( $i = 5; $i <= 25; $i=$i+5 ) {
+		foreach (array(3,5,10,15,20,25) as $i) {
 			$countoption .= "<option value='$i' ";
 			if ( $count == $i ) {$countoption .= "selected";}
 			$countoption .= ">$i</option>";
