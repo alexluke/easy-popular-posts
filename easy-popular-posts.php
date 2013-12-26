@@ -43,7 +43,7 @@ function thisismyurl_easy_popular_posts_shortcode( $options = '' ) {
 	 );
 
 
-	$instance = wp_parse_args( (array) $options, $plugin_defaults );
+	$instance = wp_parse_args( $options, $plugin_defaults );
 
 	return thisismyurl_easy_popular_posts( $instance );
 }
@@ -67,7 +67,7 @@ function thisismyurl_easy_popular_posts( $options = '' ) {
 	 );
 
 
-	$options = wp_parse_args( (array) $options, $plugin_defaults );
+	$options = wp_parse_args( $options, $plugin_defaults );
 
 
 
